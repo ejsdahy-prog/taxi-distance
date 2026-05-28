@@ -100,7 +100,7 @@ async function calculateDistance(){
     try{
 
         const response = await fetch(
-            `http://localhost:3000/distance?start=${encodeURIComponent(start)}&goal=${encodeURIComponent(goal)}`
+            
         );
 
         const data = await response.json();
