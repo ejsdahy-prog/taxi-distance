@@ -1,10 +1,19 @@
 const express = require("express");
-const cors = require("cors");
-const axios = require("axios");
+const path = require("path");
 
 const app = express();
 
-app.use(cors());
+app.use(express.static(__dirname));
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log("서버 실행중");
+});
 
 // 네이버 API 키
 const CLIENT_ID = "gxa4fpctx9"; 
