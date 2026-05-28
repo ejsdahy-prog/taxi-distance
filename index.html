@@ -100,9 +100,8 @@ async function calculateDistance(){
     try{
 
 const response = await fetch(
-        `/calculate?start=${encodeURIComponent(start)}&goal=${encodeURIComponent(goal)}`
-    );
-
+  `/distance?start=${encodeURIComponent(start)}&goal=${encodeURIComponent(goal)}`
+);
         const data = await response.json();
 
         if(data.error){
