@@ -30,6 +30,21 @@ app.get("/distance", async (req, res) => {
   const start = req.query.start;
   const goal = req.query.goal;
 
+app.get("/calculate", (req, res) => {
+
+    const start = req.query.start;
+    const goal = req.query.goal;
+
+    res.json({
+        distance: 15,
+        duration: 30,
+        toll: 3000,
+        price: 25000
+    });
+
+});
+
+
   try {
 
     // 출발지 좌표 변환
