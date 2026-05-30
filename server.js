@@ -89,7 +89,7 @@ app.get("/distance", async (req, res) => {
     const toll = summary.tollFare;
 
     // 예상 택시비
-    const price = Math.round(distance * 1400);
+    const price = Math.round(distance * 1500);
 
     res.json({
       distance,
